@@ -18,7 +18,7 @@ int main(int argc, char *argv[])
     fread(bytes, 3, 1, file);
 
     // Check is bytes are following the JPEG format
-    if (bytes[0] == 0xff && bytes[0] == 0xd8 && bytes[0] == 0xff)
+    if (bytes[0] == 0xff && bytes[1] == 0xd8 && bytes[2] == 0xff)
     {
         printf("Maybe\n");
     }
