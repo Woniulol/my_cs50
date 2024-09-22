@@ -23,5 +23,28 @@ int main(void)
     // But with a pointer, p will point to the value directly.
 
     // Generally, a pointer is 8 bytes.
+
+    // Technically speaking, there is no string.
+    // A string is a variable that contains the address of a character (which could be the start of multiple character)
+    // So, a string is just the address of a single character, and the end of the string is denoted by a null terminator (0 for 8 bits)
+
+    char *s = "EMMA";
+    // %s has special meaning toward %s, it will print every thing starting from &s all the way to null terminator
+    printf("%s\n", s);
+    printf("%p\n", s);
+
+    // Pointer arithmetic
+    printf("%c\n", *s);
+    printf("%c\n", *(s+1));
+    printf("%c\n", *(s+2));
+    printf("%c\n", *(s+3));
+    printf("%c\n", *(s+4));
+
+    printf("%p\n", &s[0]);
+    printf("%p\n", &s[1]);
+    printf("%p\n", &s[2]);
+    printf("%p\n", &s[3]);
+    printf("%p\n", &s[4]);
+    printf("%i\n", (int) s[4]);
 }
 
